@@ -5,4 +5,4 @@ private:
 public:
   StatPriorityTemplate();
   ~StatPriorityTemplate();
-}
+};

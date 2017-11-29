@@ -1,6 +1,10 @@
 #pragma once
 
 #include "../Structures/MaNGOSBot.h"
+#include "../Templates/OutfitTemplate.h"
+#include "../Templates/StatPriorityTemplate.h"
+#include "../Templates/CharacterCreateTemplate.h"
+
 
 enum BOT_ROLE : int = {
 	BOT_ROLE_TANK = 1,
@@ -9,18 +13,16 @@ enum BOT_ROLE : int = {
 };
 
 class MaNGOSBotFactory {
-	//MaNGOSBot CreateBot(uint32 accountId, uint8 )
-	void SetRole(MaNGOSBot* pBot, BOT_ROLE role);
+private:
+	uint32 TotalBotCount = 0;
 
-	// Inventory Related
-	void AddBags(MaNGOSBot* pBot);
-	void AddFood(MaNGOSBot* pBot);
-	void AddWater(MaNGOSBot* pBot);
+	// Load/Create bots 
+	void LoadExistingBots();
+	void GenerateBots();
 
-	void SetTalents(MaNGOSBot* pBot, bool allTalents);
-
-
+	// Character Generation
+	CharacterCreateTemplate* RandomCharacter();
 public:
-	MaNGOSBotFactory();
+	MaNGOSBotFactory(int botCount);
 	~MaNGOSBotFactory();
 };

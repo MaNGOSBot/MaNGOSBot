@@ -5,4 +5,4 @@ private:
 public:
   OutfitTemplate();
   ~OutfitTemplate();
-}
+};

@@ -2,9 +2,9 @@
 
 class MaNGOSBot {
 private:
-
-
 public:
-	MaNGOSBot();
+	MaNGOSBot(Player* player);
 	~MaNGOSBot();
+
+	void Update(float fDelta);
 };
