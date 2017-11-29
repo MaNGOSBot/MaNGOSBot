@@ -1,6 +1,6 @@
 #pragma once
 
-#include "MaNGOSBot.h"
+#include "../Structures/MaNGOSBot.h"
 
 enum BOT_ROLE : int = {
 	BOT_ROLE_TANK = 1,

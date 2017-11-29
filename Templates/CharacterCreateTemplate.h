@@ -16,10 +16,7 @@ public:
 
 	// Random Character Constructor
 	CharacterCreateTemplate(string name, uint8 cls);
+
 	// Specific Character Construction, might be useful at some point?
-	CharacterCreateTemplate(string name, uint8 cls, uint8 race, uint8 gender, uint8 skinColor, pair<uint8, uint8> face, pair<uint8, uint8> hair);
-	// General Destructor
-	~CharacterCreateTemplate() {
-		delete Name; // Need to delete Name because it's a char** basically
-	}
+	CharacterCreateTemplate(string name, uint8 cls, uint8 race, uint8 gender, uint8 skinColor, pair<uint8, uint8> face, pair<uint8, uint8> hair, uint8 facialHair = 0);
 };
